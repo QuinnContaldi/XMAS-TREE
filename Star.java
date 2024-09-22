@@ -1,10 +1,22 @@
 public class Star extends TreeDecorator {
     Tree tree;
     public Star(Tree tree){
-        //will check here to see if tree has a star
-        this.tree = tree;
+        if(tree.statusStar() == false){
+            this.tree = tree;
+            setStar(true);
+        }
+        else{
+            System.out.println("Already has star");
+        }
     }
 
+    public void setStar(boolean hasStar){
+        tree.setStar(hasStar);
+    }
+    
+    public boolean statusStar(){
+        return tree.hasStar;
+    }
     public String getDescription()
     {
         return tree.getDescription() + "Star ";
