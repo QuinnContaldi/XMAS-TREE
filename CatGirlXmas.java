@@ -17,12 +17,14 @@ public class CatGirlXmas{
 
         while(menuVar != 0)
         {
+            System.out.println(" ");
             System.out.println("Please pay careful attention to the following menu choices");
             System.out.println("0: end the CatgirlXmas software");
             System.out.println("1: Trees for sale");
             System.out.println("2: Decorations for sale");
             System.out.println("3: print current receipt");
             System.out.println("Please Choose and option: ");
+            System.out.println(" ");
             menuVar = menuScanner.nextInt();
                 switch(menuVar)
                 {
@@ -33,6 +35,8 @@ public class CatGirlXmas{
                             //shows the run time polymorphisim of my tree varible to show all of the prices
                             //this allows us to reassign the tree object getting rid of all previous decoration
                             //if the client wants to buy a new tree 
+                            System.out.println(" ");
+                            System.out.println("************TREE*********** ");
                             tree = new DouglasFir();
                             System.out.println("1: " + tree.getDescription() + "$" + tree.cost());
                             tree = new BalsamFir();
@@ -63,6 +67,8 @@ public class CatGirlXmas{
                                 }
                     break;
                     case 2:
+                            System.out.println(" ");
+                            System.out.println("************Decorations*********** ");
                             System.out.println("1: " + "Balls Blue " + "$" + 1.00);
                             System.out.println("2: " + "Balls Red " + "$" + 2.00);
                             System.out.println("3: " + "Balls Silver " + "$" + 3.00);
@@ -102,12 +108,14 @@ public class CatGirlXmas{
                                     }
                                     else
                                     {
-                                        System.out.println("error already have a star");
+                                        System.out.println("Error tree already has a star");
                                     }
                                 break;
                                 }
                     break;
                     case 3:
+                            System.out.println(" ");
+                            System.out.println("***********RECEIPT************* ");
                             System.out.println(tree.getDescription() + " " + tree.cost());
                     break;
                 }
